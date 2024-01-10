@@ -1,0 +1,125 @@
+version: 0.1.1
+default:
+  # Default profile created for data IO access.
+  # Add your credentials for the source you use, and delete the rest.
+  # AWS
+  AWS_ACCESS_KEY_ID: "{{ env_var('AWS_ACCESS_KEY_ID') }}"
+  AWS_SECRET_ACCESS_KEY: "{{ env_var('AWS_SECRET_ACCESS_KEY') }}"
+  AWS_SESSION_TOKEN: session_token (Used to generate Redshift credentials)
+  AWS_REGION: region
+  # Azure
+  AZURE_CLIENT_ID: "{{ env_var('AZURE_CLIENT_ID') }}"
+  AZURE_CLIENT_SECRET: "{{ env_var('AZURE_CLIENT_SECRET') }}"
+  AZURE_STORAGE_ACCOUNT_NAME: "{{ env_var('AZURE_STORAGE_ACCOUNT_NAME') }}"
+  AZURE_TENANT_ID: "{{ env_var('AZURE_TENANT_ID') }}"
+  # Chroma
+  CHROMA_COLLECTION: collection_name
+  CHROMA_PATH: path
+  # Clickhouse
+  CLICKHOUSE_DATABASE: default
+  CLICKHOUSE_HOST: host.docker.internal
+  CLICKHOUSE_INTERFACE: http
+  CLICKHOUSE_PASSWORD: null
+  CLICKHOUSE_PORT: 8123
+  CLICKHOUSE_USERNAME: null
+  # Druid
+  DRUID_HOST: hostname
+  DRUID_PASSWORD: password
+  DRUID_PATH: /druid/v2/sql/
+  DRUID_PORT: 8082
+  DRUID_SCHEME: http
+  DRUID_USER: user
+  # DuckDB
+  DUCKDB_DATABASE: database
+  DUCKDB_SCHEMA: main
+  # Google
+  GOOGLE_SERVICE_ACC_KEY:
+    type: service_account
+    project_id: "direct-branch-410717"
+    private_key_id: "b6c89410cd4bf39a12fcab09d1054059137ac66f"
+    private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC6yj1Q5JZLe55S\nLDQEFCeTLLa7amV2JcU2bYMuG7SuLru9F5ZR8fMPmZ3FaVbVpqFaXHI2c131+zzf\nu968dRcTs16bNk2Y/Dx7G721EwUfSSzN/LCnAuTkMqv+ZiYoYMuiltXk8Ej9KlL7\npES4FbUz/yFh7gw52in40PR5prGiq3vjyy6rKC0ZmMbRnOAYWAYYFpt18wbspU2i\nLmDl5AoE2QWuXtiHNJRXKR1AMPz7cBTnPA63SDxQzKxsXCVSAfVs7eTT/80fGbFo\nNJ0qw1Lks9buaDUZQ+qu8L/vSK39RW4+7u/90N9dVKrOYG5rTTRDKgP8+nLdO6P/\nc7flMyJ3AgMBAAECggEAAJfi26PA5yAkj8NB2QoirrYo0G3qlkD8IDZMgTQnqJlP\nvFkw/4qisy0m5050hFI2rKhNg+cYPc9HUWNHNlcINJD7Hx1sNVexGNJXkcCBNtO5\n14pSxKe0MsCxyNQ/O8fu7acdVSWpkwWe5NtlN9EjKwqc6wg2tA+sLB+nHyR3PPqI\nEtdPobg+Ig4Ug/o+PE1y+67RVV0rU9l0R4TgCd07x6FfWG0m3+C7/DcPNnnl+VIY\nIcHgJnX3lx1nBaXoF77hRVKUeyfU8TSCcKmLb9cdyx2nFW4U4o68mK0JlApDt1pp\nxttMdNzY8bGwoA3q/jykDF+OnP7mJpK1zTlkxbe4yQKBgQDi1iX6+XhRwL/61I2C\n5Qdbm3XhvaHNpWv4uoZ7k85Wa17FA/sz/ZgGwSVQYk+GlKAFX/1ZvRk/1ONfUs20\nQmtnUz/XHts6VxqrfiUvhNVleiZDgtHJaLl9M24/vnghIUf59pEiG90uE7tHY5Kr\nhJFVV+B33UiRD8a+Nuudv5u/KQKBgQDSzgsaPaB17wc8pdZTt0oqbUulNIWp/EVE\nIXh6ce33Z7Bkk6Q/CzhKApdCD/XQufG7rPL75BuoJJsKoSAUb1b+/ciHyAZSyX2D\nJBV0ja2b9wUHiH07jpJv2DGjJOpD88/K2wchGsNaiWIQuKMSCC7qLL8CHj63nUGb\nDV1E2PEonwKBgGrXGsR/RCCdfM8T1iNU5IZNTtSokNFfnN9mW3lRQNqLb/Oz0FnI\nlBZ6Wqzl4TcuQcDGWXovCvl5uC5pveGtdxEPsP4N1oxAApvLqpAbLLfDNMqPj2gi\nH1vNIZx8hfB00IX3kJxUK3VMbeVODQMkSZ+86EkMvOU2XRGypH+EhEMhAoGAMYuB\nqoIvc2hhcAyeCgD7KmuTqtlkTOZgtTmUolqijlJNb+YPZU3SxfpD6J/tq0f4m55z\nYWZkZals0xu5eXQNo1KsTdViPxTiLe9OJ52g3xY4lWOr41KH8keCqxBjCuODw+6k\nh1BN97pwVPPAR92qgRlRL0NChE8uey2x7Rt72osCgYAVBzThjzHgRqNAuJQgix1m\n+Bb7+VmbgAuIUL5YKUxw3YvDBM7LJCFhuAwok4aMg53QVfAawC9DzLcc3mIyP54+\nLCTu1sypqxqmTc2GN/LsmQ+yk6CxRLdKRKTvNolr7S0JjOIHLEY8vgKT18e0qRI5\niHp35K1KxA4OVuGQgbTBQg==\n-----END PRIVATE KEY-----\n"
+    client_email: "uber-dataengineering@direct-branch-410717.iam.gserviceaccount.com"
+    auth_uri: "https://accounts.google.com/o/oauth2/auth"
+    token_uri: "https://accounts.google.com/o/oauth2/token"
+    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
+    client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/uber-dataengineering%40direct-branch-410717.iam.gserviceaccount.com"
+  GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/path/to/your/service/account/key.json"
+  GOOGLE_LOCATION: US # Optional
+  # MongoDB
+  # Specify either the connection string or the (host, password, user, port) to connect to MongoDB.
+  MONGODB_CONNECTION_STRING: "mongodb://{username}:{password}@{host}:{port}/"
+  MONGODB_HOST: host
+  MONGODB_PORT: 27017
+  MONGODB_USER: user
+  MONGODB_PASSWORD: password
+  MONGODB_DATABASE: database
+  MONGODB_COLLECTION: collection
+  # MSSQL
+  MSSQL_DATABASE: database
+  MSSQL_SCHEMA: schema
+  MSSQL_DRIVER: "ODBC Driver 18 for SQL Server"
+  MSSQL_HOST: host
+  MSSQL_PASSWORD: password
+  MSSQL_PORT: 1433
+  MSSQL_USER: SA
+  # MySQL
+  MYSQL_DATABASE: database
+  MYSQL_HOST: host
+  MYSQL_PASSWORD: password
+  MYSQL_PORT: 3306
+  MYSQL_USER: root
+  # Pinot
+  PINOT_HOST: hostname
+  PINOT_PASSWORD: password
+  PINOT_PATH: /query/sql
+  PINOT_PORT: 8000
+  PINOT_SCHEME: http
+  PINOT_USER: user
+  # PostgresSQL
+  POSTGRES_CONNECT_TIMEOUT: 10
+  POSTGRES_DBNAME: postgres
+  POSTGRES_SCHEMA: public # Optional
+  POSTGRES_USER: username
+  POSTGRES_PASSWORD: password
+  POSTGRES_HOST: hostname
+  POSTGRES_PORT: 5432
+  # Qdrant
+  QDRANT_COLLECTION: collection
+  QDRANT_PATH: path
+  # Redshift
+  REDSHIFT_SCHEMA: public # Optional
+  REDSHIFT_DBNAME: redshift_db_name
+  REDSHIFT_HOST: redshift_cluster_id.identifier.region.redshift.amazonaws.com
+  REDSHIFT_PORT: 5439
+  REDSHIFT_TEMP_CRED_USER: temp_username
+  REDSHIFT_TEMP_CRED_PASSWORD: temp_password
+  REDSHIFT_DBUSER: redshift_db_user
+  REDSHIFT_CLUSTER_ID: redshift_cluster_id
+  REDSHIFT_IAM_PROFILE: default
+  # Snowflake
+  SNOWFLAKE_USER: username
+  SNOWFLAKE_PASSWORD: password
+  SNOWFLAKE_ACCOUNT: account_id.region
+  SNOWFLAKE_DEFAULT_WH: null                  # Optional default warehouse
+  SNOWFLAKE_DEFAULT_DB: null                  # Optional default database
+  SNOWFLAKE_DEFAULT_SCHEMA: null              # Optional default schema
+  SNOWFLAKE_PRIVATE_KEY_PASSPHRASE: null      # Optional private key passphrase
+  SNOWFLAKE_PRIVATE_KEY_PATH: null            # Optional private key path
+  SNOWFLAKE_ROLE: null                        # Optional role name
+  SNOWFLAKE_TIMEOUT: null                     # Optional timeout in seconds
+  # Trino
+  trino:
+    catalog: postgresql                       # Change this to the catalog of your choice
+    host: 127.0.0.1
+    http_headers:
+      X-Something: 'mage=power'
+    http_scheme: http
+    password: mage1337                        # Optional
+    port: 8080
+    schema: core_data
+    session_properties:                       # Optional
+      acc01.optimize_locality_enabled: false
+      optimize_hash_generation: true
+    source: trino-cli                         # Optional
+    user: admin
+    verify: /path/to/your/ca.crt              # Optional
