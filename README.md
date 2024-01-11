@@ -27,8 +27,8 @@ Data Pipeine Tool - https://www.mage.ai/
 pip install mage-ai
 ```
 
-[!NOTE]
-The dataset used here has so many data entries, more than 300,000 to be precise. Therefore I have only used the first 100,000 data entries for the project.
+>[!NOTE]
+>The dataset used here has so many data entries, more than 300,000 to be precise. Therefore I have only used the first 100,000 data entries for the project.
 
 [!WARNING]
 I have installed python, mage-ai on my local system as the data size was huge and I didnt want to use any cloud service due to the same reason.
@@ -43,4 +43,4 @@ As this is a local system project:-
 
 
 ## Data Model
-<img src="images/data_model.jpeg">
+<img src="images/data_model.png">
